@@ -28,12 +28,20 @@ gulp.task('sass', function(){
 });
 
 gulp.task('scripts', function(){
-  gulp.src('/scripts/modules/main.js')
+  // gulp.src('./scripts/modules/main.js')
+  //   .pipe(include())
+  //   .pipe(babel( {
+  //     presets: ['es2015', 'react'],
+  //     compact: !debug
+  //   }))
+  //   .pipe(gulp.dest('./scripts/'));
+  gulp.src('/js/modules/main.js')
     .pipe(include())
     .pipe(babel( {
-      compact: debug ? false : true
+      presets: ['es2015', 'react'],
+      compact: !debug
     }))
-    .pipe(gulp.dest('/scripts/'));
+    .pipe(gulp.dest('/js/'));
 });
 
 gulp.task('serve', function(){
