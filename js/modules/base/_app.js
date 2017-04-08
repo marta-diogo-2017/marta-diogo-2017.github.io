@@ -5,6 +5,6 @@
 // }
 
 ReactDOM.render(
-  <h1>Oi maria!</h1>,
+  <Casamento/>,
   document.getElementById('maria')
 );
