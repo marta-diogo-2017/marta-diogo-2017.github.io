@@ -28,20 +28,13 @@ gulp.task('sass', function(){
 });
 
 gulp.task('scripts', function(){
-  // gulp.src('./scripts/modules/main.js')
-  //   .pipe(include())
-  //   .pipe(babel( {
-  //     presets: ['es2015', 'react'],
-  //     compact: !debug
-  //   }))
-  //   .pipe(gulp.dest('./scripts/'));
-  gulp.src('/js/modules/main.js')
+  return gulp.src('./js/modules/main.js')
     .pipe(include())
     .pipe(babel( {
       presets: ['es2015', 'react'],
       compact: !debug
     }))
-    .pipe(gulp.dest('/js/'));
+    .pipe(gulp.dest('./js/'));
 });
 
 gulp.task('serve', function(){

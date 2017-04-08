@@ -1,3 +1,5 @@
+"use strict";
+
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyCwO6sSV86vsvzrNocIo3FOVWJ9hyO3ID4",
@@ -7,3 +9,15 @@ var config = {
   messagingSenderId: "777620829455"
 };
 firebase.initializeApp(config);
+
+// class WeddingApp extends React.Component {
+//   render() {
+//     return <h1>Hello {this.props.name}</h1>;
+//   }
+// }
+
+ReactDOM.render(React.createElement(
+  "h1",
+  null,
+  "Oi maria!"
+), document.getElementById('maria'));
