@@ -18,22 +18,141 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var Casamento = function (_React$Component) {
-  _inherits(Casamento, _React$Component);
+var Antonio = function (_React$Component) {
+  _inherits(Antonio, _React$Component);
 
-  function Casamento() {
-    _classCallCheck(this, Casamento);
+  function Antonio(props) {
+    _classCallCheck(this, Antonio);
 
-    return _possibleConstructorReturn(this, (Casamento.__proto__ || Object.getPrototypeOf(Casamento)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Antonio.__proto__ || Object.getPrototypeOf(Antonio)).call(this, props));
+
+    _this.state = {
+      tonio: ''
+    };
+    _this.onChange = _this.onChange.bind(_this);
+    _this.onSubmit = _this.onSubmit.bind(_this);
+    return _this;
   }
 
-  _createClass(Casamento, [{
+  _createClass(Antonio, [{
+    key: "onChange",
+    value: function onChange(e) {
+      var value = e.target.value;
+      this.setState({ tonio: value });
+    }
+  }, {
+    key: "onSubmit",
+    value: function onSubmit(e) {
+      this.props.valAntonio(this.state.tonio);
+      e.preventDefault();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h1",
+          null,
+          "Marta e Diogo 2017"
+        ),
+        React.createElement(
+          "p",
+          null,
+          "O casamento do ano!"
+        ),
+        React.createElement(
+          "form",
+          { onSubmit: this.onSubmit },
+          React.createElement("input", { type: "text", onChange: this.onChange }),
+          React.createElement(
+            "button",
+            null,
+            "go"
+          )
+        )
+      );
+    }
+  }]);
+
+  return Antonio;
+}(React.Component);
+
+var Website = function (_React$Component2) {
+  _inherits(Website, _React$Component2);
+
+  function Website() {
+    _classCallCheck(this, Website);
+
+    return _possibleConstructorReturn(this, (Website.__proto__ || Object.getPrototypeOf(Website)).apply(this, arguments));
+  }
+
+  _createClass(Website, [{
     key: "render",
     value: function render() {
       return React.createElement(
         "h1",
         null,
-        "Hello maria"
+        "Oi Maria! ",
+        this.props.admin ? 'Queres cá vire' : false
+      );
+    }
+  }]);
+
+  return Website;
+}(React.Component);
+
+var Casamento = function (_React$Component3) {
+  _inherits(Casamento, _React$Component3);
+
+  function Casamento(props) {
+    _classCallCheck(this, Casamento);
+
+    var _this3 = _possibleConstructorReturn(this, (Casamento.__proto__ || Object.getPrototypeOf(Casamento)).call(this, props));
+
+    _this3.state = {
+      visitor: false,
+      admin: false,
+      antonio: ''
+    };
+
+    _this3.valAntonio = _this3.valAntonio.bind(_this3);
+    return _this3;
+  }
+
+  _createClass(Casamento, [{
+    key: "valAntonio",
+    value: function valAntonio(input) {
+      if (input == 'maria') {
+        this.setState({ visitor: true });
+      }
+      if (input == 'maria1') {
+        this.setState({ admin: true });
+      }
+    }
+  }, {
+    key: "whatShouldIRender",
+    value: function whatShouldIRender() {
+      var visitor = this.state.visitor;
+      var admin = this.state.admin;
+
+      if (visitor) {
+        return React.createElement(Website, { admin: false });
+      } else if (admin) {
+        return React.createElement(Website, { admin: true });
+      } else {
+        return React.createElement(Antonio, { antonio: this.state.antonio,
+          valAntonio: this.valAntonio });
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "main",
+        null,
+        this.whatShouldIRender()
       );
     }
   }]);
