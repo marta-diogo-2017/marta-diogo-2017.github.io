@@ -12,10 +12,12 @@ class Casamento extends React.Component {
   }
 
   valAntonio (input) {
-    if (input == 'maria') {
-      this.setState({visitor: true})
-    }
-    if (input == 'maria1') {
+    //if (input == '14out17') {
+      // 14out17
+      //this.setState({visitor: true})
+    //}
+    if (input == '') {
+      // martA9494
       this.setState({admin: true})
     }
   }
