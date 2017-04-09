@@ -64,6 +64,7 @@ class Website extends React.Component {
         <table>
           <thead>
             <tr>
+              <td>Id</td>
               <td>Nome</td>
               <td>Email</td>
               <td>Other?</td>
@@ -75,6 +76,7 @@ class Website extends React.Component {
               this.state.guests.map( (guest, index) => {
                 return (
                   <tr key={index}>
+                    <td>#{index}</td>
                     <td>{guest.name}</td>
                     <td>{guest.email}</td>
                     <td>{guest.other}</td>
