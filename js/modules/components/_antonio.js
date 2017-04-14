@@ -26,8 +26,17 @@ class Antonio extends React.Component {
         <p>O casamento do ano!</p>
 
         <form onSubmit={this.onSubmit}>
-          <input type="text" onChange={this.onChange}/>
-          <button>go</button>
+          <div className="row">
+            <div className="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+              <div className="form-group">
+                <input className="form-control" type="text" onChange={this.onChange}/>
+              </div>
+              <div className="form-group">
+                <input className="btn btn-default" type="submit" value="Entrar" />
+              </div>
+            </div>
+          </div>
+
         </form>
       </div>
     );

@@ -36,24 +36,36 @@ class Website extends React.Component {
 
   renderForm(){
     return(
-      <form onSubmit={this.onSubmit}>
-        <label>
-          Nome
-          <input id="name" type="text" value={this.state.newGuest.name} onChange={this.onChange}/>
-        </label>
-        <label>
-          E-mail
-          <input id="email" type="email" value={this.state.newGuest.email} onChange={this.onChange}/>
-        </label>
-        <label>
-          Estou a confirmar por mim e por ...
-          <input id="other" type="text" value={this.state.newGuest.other} onChange={this.onChange}/>
-        </label>
-        <label>
-          Deixa-nos a tua mensagem após o sinal (biiiiip!)
-          <textarea id="message" value={this.state.newGuest.message} onChange={this.onChange} />
-        </label>
-        <input type="submit" value="Submit"/>
+      <form className="form-horizontal" onSubmit={this.onSubmit}>
+        <div className="form-group">
+          <label htmlFor="name">
+            Nome
+          </label>
+          <input className="form-control" id="name" type="text" value={this.state.newGuest.name} onChange={this.onChange}/>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email">
+            E-mail
+          </label>
+          <input className="form-control" id="email" type="email" value={this.state.newGuest.email} onChange={this.onChange}/>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="other">
+            Estou a confirmar por mim e por ...
+          </label>
+          <input className="form-control" id="other" type="text" value={this.state.newGuest.other} onChange={this.onChange}/>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="message">
+            Deixa-nos a tua mensagem após o sinal (biiiiip!)
+          </label>
+          <textarea className="form-control" id="message" value={this.state.newGuest.message} onChange={this.onChange} />
+        </div>
+
+        <input className="btn btn-default" type="submit" value="Submit"/>
       </form>
     );
   }
@@ -112,7 +124,7 @@ class Website extends React.Component {
             </nav>
           </div>
         </header>
-        <main>
+        <main className="container">
           <section id="fofos">
             <div>
               <p>O grande dia está a chegar! Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento, dia 14 de Outubro de 2017.</p>
@@ -125,8 +137,18 @@ class Website extends React.Component {
           </section>
           <section id="gifts">
             <p>
-              A tradição já não é o que era! Há 2 anos atrás, decidimos "juntar os trapinhos e as nossas escovas de dentes". Não fizémos lista de casamento porque, para nós, o mais importante é podermos celebrar o nosso amor e a nossa união com as pessoas que nos são mais queridas. A melhor lembrança que nos podem dar é festejar o dia connosco. Se mesmo assim quiserem presentear-nos com algo mais, o nosso NIB é: (colocar NIB num svg para não adarem aqui a roubar números por crawling. obg)
+              A tradição já não é o que era!
             </p>
+            <p>
+              Há 2 anos atrás, decidimos "juntar os trapinhos e as nossas escovas de dentes".
+            </p>
+            <p>
+              Não fizemos lista de casamento porque, para nós, o mais importante é podermos celebrar o nosso amor e a nossa união com as pessoas que nos são mais queridas.
+            </p>
+            <p>
+              A melhor lembrança que nos podem dar é festejar o dia connosco. <br />Se mesmo assim quiserem presentear-nos com algo mais, o nosso NIB é:
+            </p>
+            <p class="text-big">0000 0000 0000 0000</p>
           </section>
           <section id="confirm">
             <p>
