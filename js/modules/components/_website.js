@@ -3,7 +3,7 @@ class Website extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      guests : [],
+      guests : {},
       newGuest : {
         name    : '',
         email   : '',
@@ -18,9 +18,25 @@ class Website extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentDidMount () {
+    const db = firebase.database();
+    const guestRef = dc.ref().child('guests');
+    guestRef.on('value', snap => {
+      this.set.state({
+        guests: span.val();
+      })
+    })
+  }
+
   onSubmit (e) {
-    let newGuest = this.state.guests.concat([this.state.newGuest]);
-    this.setState({guests: newGuest});
+    // add to guest list
+    let guestListLength = Object.keys(this.state.guests).length;
+    console.log(guestListLength);
+
+    let guestsCopy = Object.assign({}, this.state.guests);
+    guestsCopy[String(guestListLength)] = this.state.newGuest;
+    this.setState({guests: guestsCopy});
+    // reset new
     this.setState({newGuest: {name:'', email:'', other: '', message:''}})
     e.preventDefault();
   }
@@ -77,10 +93,10 @@ class Website extends React.Component {
                 return (
                   <tr key={index}>
                     <td>#{index}</td>
-                    <td>{guest.name}</td>
-                    <td>{guest.email}</td>
-                    <td>{guest.other}</td>
-                    <td>{guest.message}</td>
+                    <td>{guest[String(index)].name}</td>
+                    <td>{guest[String(index)].email}</td>
+                    <td>{guest[String(index)].other}</td>
+                    <td>{guest[String(index)].message}</td>
                   </tr>
                 )
               })
