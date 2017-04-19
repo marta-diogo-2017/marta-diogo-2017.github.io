@@ -1,0 +1,11 @@
+$large: 1200px;
+$desktop: 992px;
+$tablet: 767px;
+$phone: 480px;
+$mini: 350px;
+
+@mixin media-above($width) {
+  @media all and (min-width: $width){
+    @content;
+  }
+}

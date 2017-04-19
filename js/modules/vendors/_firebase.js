@@ -6,4 +6,4 @@ var config = {
   storageBucket: "casamento-4ab7b.appspot.com",
   messagingSenderId: "777620829455"
 };
-firebase.initializeApp(config);
+//firebase.initializeApp(config);

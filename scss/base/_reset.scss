@@ -1,0 +1,17 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+blockquote, q {
+  quotes: none;
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
