@@ -14,28 +14,57 @@ class Website extends React.Component {
 
     this.renderForm = this.renderForm.bind(this);
     this.renderGuests = this.renderGuests.bind(this);
+    this.renderGuestList = this.renderGuestList.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount () {
     const db = firebase.database();
-    const guestRef = dc.ref().child('guests');
+    const guestRef = db.ref().child('guests');
     guestRef.on('value', snap => {
-      this.set.state({
-        guests: span.val();
+      this.setState({
+        guests: snap.val()
       })
     })
   }
 
+  renderGuestList () {
+    let g = [];
+    let guestList = this.state.guests || {};
+
+    for (var i = 0; i < Object.keys(guestList).length; i++) {
+        var guest = this.state.guests[String(i + 1)];
+        var guestRow = (
+          <tr key={i}>
+            <td>{i+1}</td>
+            <td>{guest.name}</td>
+            <td>{guest.email}</td>
+            <td>{guest.other}</td>
+            <td>{guest.message}</td>
+          </tr>
+        );
+
+        g.push(guestRow);
+      }
+    return g.map(g => g);
+    }
+
   onSubmit (e) {
+    let guestList = this.state.guests || {};
     // add to guest list
-    let guestListLength = Object.keys(this.state.guests).length;
+    let guestListLength = Object.keys(guestList).length;
     console.log(guestListLength);
 
     let guestsCopy = Object.assign({}, this.state.guests);
-    guestsCopy[String(guestListLength)] = this.state.newGuest;
+    guestsCopy[String(guestListLength + 1)] = this.state.newGuest;
     this.setState({guests: guestsCopy});
+
+    //change stuff in firebase ---
+    const db = firebase.database();
+    const guestRef = db.ref().child('guests');
+    guestRef.set(guestsCopy);
+
     // reset new
     this.setState({newGuest: {name:'', email:'', other: '', message:''}})
     e.preventDefault();
@@ -89,7 +118,7 @@ class Website extends React.Component {
   renderGuests () {
     return (
       <section>
-        <table>
+        <table className="table table-striped text-left">
           <thead>
             <tr>
               <td>Id</td>
@@ -101,17 +130,7 @@ class Website extends React.Component {
           </thead>
           <tbody>
             {
-              this.state.guests.map( (guest, index) => {
-                return (
-                  <tr key={index}>
-                    <td>#{index}</td>
-                    <td>{guest[String(index)].name}</td>
-                    <td>{guest[String(index)].email}</td>
-                    <td>{guest[String(index)].other}</td>
-                    <td>{guest[String(index)].message}</td>
-                  </tr>
-                )
-              })
+              this.renderGuestList()
             }
           </tbody>
         </table>
