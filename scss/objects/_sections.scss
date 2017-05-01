@@ -1,0 +1,18 @@
+.section {
+  @extend section;
+
+  &--before {
+    background-attachment: fixed;
+    background-color: $green;
+    background-image: url('/assets/img/wallpaper_1@0.5x.jpg');
+    background-size: cover;
+
+    @include media-above($phone) {
+      background-image: url('/assets/img/wallpaper_1@1x.jpg');
+    }
+
+    @include media-above($desktop) {
+      background-image: url('/assets/img/wallpaper_1@2x.jpg');
+    }
+  }
+}

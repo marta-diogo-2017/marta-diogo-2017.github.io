@@ -39,7 +39,7 @@ class Casamento extends React.Component {
 
   render() {
     return (
-      <main>
+      <main className="container-fluid">
         {this.whatShouldIRender()}
       </main>
     )

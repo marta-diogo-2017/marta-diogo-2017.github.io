@@ -140,30 +140,27 @@ class Website extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="row">
         <header>
-          <h1>Martuxa e Dioguito</h1>
-          <div>
-            <input type="checkbox" />
-            <label>
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-            <nav>
-              <a href="#fofos">Home</a>
-              <a href="#maps">Mapa</a>
-              <a href="#sleep">Pernoitar</a>
-              <a href="#gifts">Uma Lembrança</a>
-              <a href="#confirm">Confirmação e contactos</a>
-            </nav>
-          </div>
+          <input type="checkbox" id="menu"/>
+          <label htmlFor="menu">
+            <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
+          </label>
+          <nav>
+            <a href="#fofos">Home</a>
+            <a href="#maps">Mapa</a>
+            <a href="#gifts">Uma Lembrança</a>
+            <a href="#confirm">Confirmação e contactos</a>
+          </nav>
         </header>
-        <main className="container">
-          <section id="fofos">
+        <section id="fofos" className="section--before">
+          <img src="/assets/img/title_main.svg"/>
+        </section>
+        <article className="container">
+          <section>
             <div>
-              <p>O grande dia está a chegar! Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento, dia 14 de Outubro de 2017.</p>
-              <p>A cerimónia decorrerá na Igreja da Parede, às 11h, e a festa continuará na Quinta da Murta, em Bucelas.
+              <p>O grande dia está a chegar! Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento, dia <strong>14 de Outubro de 2017</strong>.</p>
+              <p>A cerimónia decorrerá na <strong>Igreja da Parede, às 11h</strong>, e a festa continuará na <strong>Quinta da Murta, em Bucelas</strong>.
               Convidamos-te a explorar o nosso site para descobrires mais sobre este dia!</p>
             </div>
           </section>
@@ -192,17 +189,19 @@ class Website extends React.Component {
 
               {this.renderForm()}
 
-            <div>
-              <p>Marta Carvalho</p>
-              <p>911 010 980</p>
-            </div>
-            <div>
-              <p>Diogo Ramalheira</p>
-              <p>937 913 110</p>
+            <div className="row text-center">
+              <div className="col-xs-12 col-sm-6">
+                <p>Marta Carvalho</p>
+                <p>911 010 980</p>
+              </div>
+              <div className="col-xs-12 col-sm-6">
+                <p>Diogo Ramalheira</p>
+                <p>937 913 110</p>
+              </div>
             </div>
           </section>
           {this.props.admin ? this.renderGuests() : false}
-        </main>
+        </article>
       </div>
     );
   }

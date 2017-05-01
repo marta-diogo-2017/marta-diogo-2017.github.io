@@ -21,24 +21,22 @@ class Antonio extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Marta e Diogo 2017</h1>
-        <p>O casamento do ano!</p>
+      <section className="section--before row">
+        <img src="/assets/img/title_before_main.svg" alt="Marta e Diogo" />
 
         <form onSubmit={this.onSubmit}>
-          <div className="row">
-            <div className="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
-              <div className="form-group">
-                <input className="form-control" type="text" onChange={this.onChange}/>
-              </div>
-              <div className="form-group">
-                <input className="btn btn-default" type="submit" value="Entrar" />
-              </div>
+          <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-center">
+            <div className="form-group">
+              <input placeholder="insira password" className="form-control" type="text" onChange={this.onChange}/>
+            </div>
+            <div className="form-group">
+              <input className="btn btn-default" type="submit" value="Entrar" />
             </div>
           </div>
-
         </form>
-      </div>
+
+        <img src="/assets/img/title_before_second.svg" alt="Marta e Diogo" />
+      </section>
     );
   }
 

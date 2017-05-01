@@ -1,0 +1,43 @@
+header {
+  position: fixed;
+  padding: 16px;
+  width: 100%;
+
+  input {
+    visibility: hidden;
+
+    &:checked ~ nav {
+      bottom: unset;
+      top: 0;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    float: right;
+    z-index: 1;
+  }
+
+  nav {
+    background-color: $darkgreen;
+    bottom: 999px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: unset;
+    width: 100%;
+    z-index: -1;
+
+    a {
+      padding: 2rem;
+      color: $white;
+      &:hover, &:focus {
+        color: $green;
+        text-decoration: none;
+      }
+    }
+  }
+}
