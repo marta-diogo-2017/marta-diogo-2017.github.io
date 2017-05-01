@@ -81,7 +81,7 @@ class Website extends React.Component {
 
   renderForm(){
     return(
-      <form className="form-horizontal" onSubmit={this.onSubmit}>
+      <form className="form-horizontal col-xs-12" onSubmit={this.onSubmit}>
         <div className="form-group">
           <label htmlFor="name">
             Nome
