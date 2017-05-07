@@ -17,6 +17,7 @@ class Website extends React.Component {
     this.renderGuestList = this.renderGuestList.bind(this);
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.iframe = this.iframe.bind(this);
   }
 
   componentDidMount () {
@@ -27,6 +28,12 @@ class Website extends React.Component {
         guests: snap.val()
       })
     })
+  }
+
+  iframe(link) {
+    return {
+      __html: <iframe className="maps__mapa" src={link} frameborder="0" style="border:0" allowfullscreen></iframe>
+    }
   }
 
   renderGuestList () {
@@ -153,19 +160,32 @@ class Website extends React.Component {
             <a href="#confirm">Confirmação e contactos</a>
           </nav>
         </header>
-        <section id="fofos" className="section--before">
-          <img src="/assets/img/title_main.svg"/>
+        <section id="fofos" className="section--before u--color-white">
+          <img className="front-page__img--marta"src="/assets/img/title_main.svg"/>
+          <p>O grande dia está a chegar!</p>
+          <p>Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento.</p>
         </section>
         <article className="container">
           <section>
+            <img src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
             <div>
-              <p>O grande dia está a chegar! Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento, dia <strong>14 de Outubro de 2017</strong>.</p>
-              <p>A cerimónia decorrerá na <strong>Igreja da Parede, às 11h</strong>, e a festa continuará na <strong>Quinta da Murta, em Bucelas</strong>.
-              Convidamos-te a explorar o nosso site para descobrires mais sobre este dia!</p>
+              <p>Sábado, 14 de Outubro de 2017</p>
+              <img className="location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
             </div>
+            <img src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
-          <section id="maps">
-
+          <section id="maps" className="row section--block">
+            <div className="col-xs-12 col-sm-6">
+              <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
+              <p>Avenida Amadeu Duarte, 514, 2775 Parede</p>
+              <p><a href="">mapa aqui</a></p>
+            </div>
+            <div className="col-xs-12 col-sm-6">
+              <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
+              <p>Estr. Velha do Boição, 632, 2670 Bucelas</p>
+              <p><a href="">mapa aqui</a></p>
+              {/*<iframe className="maps__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8263184680463!2d-9.129081084648762!3d38.927947079565996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd192bb53d9f367f%3A0x8adecf65a99496a0!2sQuinta+da+Murta!5e0!3m2!1sen!2spt!4v1494182016637" frameborder="0" style="border:0" allowfullscreen></iframe>*/}
+            </div>
           </section>
           <section id="gifts">
             <p>
@@ -180,7 +200,7 @@ class Website extends React.Component {
             <p>
               A melhor lembrança que nos podem dar é festejar o dia connosco. <br />Se mesmo assim quiserem presentear-nos com algo mais, o nosso NIB é:
             </p>
-            <p class="text-big">0000 0000 0000 0000</p>
+            <p className="text-big">PT50 0036 0196 9910 0049 2265 2</p>
           </section>
           <section id="confirm">
             <p>

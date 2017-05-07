@@ -6413,11 +6413,21 @@ section, .section {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 100vh;
-  padding: 6rem 0; }
+  padding: 6rem 0;
+  text-align: center; }
+  section img:not(.location), .section img:not(.location) {
+    margin: 2rem auto;
+    width: 8rem; }
+
+.location {
+  width: 40%; }
 
 @media all and (min-width: 992px) {
   .container {
     max-width: 650px; } }
+
+.u--color-white {
+  color: #fff; }
 
 .section--before {
   background-attachment: fixed;
@@ -6468,3 +6478,10 @@ header {
       header nav a:hover, header nav a:focus {
         color: #94cf9b;
         text-decoration: none; }
+
+.front-page__img {
+  margin: 0 auto 2rem;
+  max-width: 30rem;
+  width: 80%; }
+  .front-page__img--marta {
+    width: 40%; }

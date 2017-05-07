@@ -19,6 +19,8 @@ class Casamento extends React.Component {
     if (input == '') {
       // martA9494
       this.setState({admin: true})
+    } else {
+      return false;
     }
   }
 

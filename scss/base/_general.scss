@@ -20,6 +20,20 @@ section {
   justify-content: center;
   min-height: 100vh;
   padding: 6rem 0;
+  text-align: center;
+
+  img:not(.location) {
+    margin: 2rem auto;
+    width: 8rem;
+  }
+}
+
+.section--block {
+  display: block;
+}
+
+.location{
+  width: 40%;
 }
 
 .container {
