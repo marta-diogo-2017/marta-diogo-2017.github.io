@@ -177,12 +177,12 @@ class Website extends React.Component {
             <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
           <section id="maps" className="row section--block">
-            <div className="col-xs-12 col-sm-6">
+            <div className="col-xs-12 col-sm-6 margin-bottom-lol">
               <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
               <p className="legend">Avenida Amadeu Duarte, 514, 2775 Parede</p>
               <p><a href="">mapa aqui</a></p>
             </div>
-            <div className="col-xs-12 col-sm-6">
+            <div className="col-xs-12 col-sm-6 margin-bottom-lol">
               <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
               <p className="legend">Estr. Velha do Boição, 632, 2670 Bucelas</p>
               <p><a href="https://goo.gl/maps/BRTrs9c8gvn">mapa aqui</a></p>
