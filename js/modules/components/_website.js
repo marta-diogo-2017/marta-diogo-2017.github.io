@@ -189,6 +189,7 @@ class Website extends React.Component {
             <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
           <section id="maps" className="row section--block">
+            <h2><img className="section__title" src="/assets/img/title--02.svg" alt="mapas"/></h2>
             <div className="col-xs-12 col-sm-6 margin-bottom-lol">
               <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
               <p className="legend">Avenida Amadeu Duarte, 514, 2775 Parede</p>
@@ -203,6 +204,7 @@ class Website extends React.Component {
           </section>
           <section id="gifts">
             <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
+            <h2><img className="section__title" src="/assets/img/title--01.svg" alt="uma lembrança"/></h2>
             <p>
 
               Para nós, o mais importante é podermos celebrar o nosso amor com as pessoas que nos são mais queridas.
@@ -214,6 +216,7 @@ class Website extends React.Component {
             <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
           <section id="confirm">
+            <h2><img className="section__title" src="/assets/img/title--03.svg" alt="confirmação"/></h2>
             <p>
               Por favor, confirma a tua presença até ao dia 14 de Agosto de 2017
             </p>
