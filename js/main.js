@@ -398,10 +398,10 @@ var Website = function (_React$Component2) {
                 React.createElement(
                     "section",
                     { id: "fofos", className: "section--before u--color-white" },
-                    React.createElement("img", { className: "front-page__img--marta", src: "/assets/img/title_main.svg" }),
+                    React.createElement("img", { className: "front-page__img", src: "/assets/img/title_main.svg" }),
                     React.createElement(
                         "div",
-                        { className: "section" },
+                        { className: "container" },
                         React.createElement(
                             "p",
                             null,
@@ -429,7 +429,7 @@ var Website = function (_React$Component2) {
                                 null,
                                 "S\xE1bado, 14 de Outubro de 2017"
                             ),
-                            React.createElement("img", { className: "location", src: "/assets/img/locations.svg", alt: "Marta e Diogo" })
+                            React.createElement("img", { className: "img-responsive location", src: "/assets/img/locations.svg", alt: "Marta e Diogo" })
                         ),
                         React.createElement("img", { className: "flower-power", src: "/assets/img/flower_up_min.svg", alt: "Marta e Diogo" })
                     ),

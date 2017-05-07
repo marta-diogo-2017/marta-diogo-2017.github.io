@@ -161,8 +161,8 @@ class Website extends React.Component {
           </nav>
         </header>*/}
         <section id="fofos" className="section--before u--color-white">
-          <img className="front-page__img--marta"src="/assets/img/title_main.svg"/>
-          <div className="section">
+          <img className="front-page__img"src="/assets/img/title_main.svg"/>
+          <div className="container">
             <p>O grande dia está a chegar!</p>
             <p>Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento.</p>
           </div>
@@ -172,7 +172,7 @@ class Website extends React.Component {
             <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
             <div>
               <p>Sábado, 14 de Outubro de 2017</p>
-              <img className="location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
+              <img className="img-responsive location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
             </div>
             <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>

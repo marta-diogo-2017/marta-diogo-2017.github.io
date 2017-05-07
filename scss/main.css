@@ -6424,7 +6424,9 @@ section, .section {
   display: block; }
 
 .location {
-  max-width: 40%; }
+  margin: 2rem auto;
+  max-width: 30rem;
+  width: 100%; }
 
 @media all and (min-width: 992px) {
   .container {
@@ -6487,5 +6489,3 @@ header {
   margin: 0 auto 2rem;
   max-width: 30rem;
   width: 80%; }
-  .front-page__img--marta {
-    width: 40%; }
