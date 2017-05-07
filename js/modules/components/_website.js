@@ -9,7 +9,9 @@ class Website extends React.Component {
         email   : '',
         other   : '',
         message : ''
-      }
+      },
+      submitted: false,
+      validation: true
     };
 
     this.renderForm = this.renderForm.bind(this);
@@ -58,22 +60,27 @@ class Website extends React.Component {
     }
 
   onSubmit (e) {
-    let guestList = this.state.guests || {};
-    // add to guest list
-    let guestListLength = Object.keys(guestList).length;
-    console.log(guestListLength);
+    if (this.state.newGuest.name != '' && this.state.newGuest.email != '') {
+      let guestList = this.state.guests || {};
+      // add to guest list
+      let guestListLength = Object.keys(guestList).length;
+      console.log(guestListLength);
 
-    let guestsCopy = Object.assign({}, this.state.guests);
-    guestsCopy[String(guestListLength + 1)] = this.state.newGuest;
-    this.setState({guests: guestsCopy});
+      let guestsCopy = Object.assign({}, this.state.guests);
+      guestsCopy[String(guestListLength + 1)] = this.state.newGuest;
+      this.setState({guests: guestsCopy});
 
-    //change stuff in firebase ---
-    const db = firebase.database();
-    const guestRef = db.ref().child('guests');
-    guestRef.set(guestsCopy);
+      //change stuff in firebase ---
+      const db = firebase.database();
+      const guestRef = db.ref().child('guests');
+      guestRef.set(guestsCopy);
 
-    // reset new
-    this.setState({newGuest: {name:'', email:'', other: '', message:''}})
+      // reset new
+      this.setState({newGuest: {name:'', email:'', other: '', message:''}, submitted: true});
+    } else {
+      this.setState({validation: false});
+    }
+
     e.preventDefault();
   }
 
@@ -84,6 +91,10 @@ class Website extends React.Component {
     let stateCopy = Object.assign({}, this.state);
     stateCopy.newGuest[id] = value;
     this.setState(stateCopy);
+
+    if (!this.state.validation && this.state.newGuest.name != '' && this.state.newGuest.email != '') {
+      this.setState({validation: true});
+    }
   }
 
   renderForm(){
@@ -117,7 +128,8 @@ class Website extends React.Component {
           <textarea className="form-control" id="message" value={this.state.newGuest.message} onChange={this.onChange} />
         </div>
 
-        <input className="btn btn-default" type="submit" value="Submit"/>
+        {this.state.validation ? null : <p>Parece que falta preencher o teu nome ou o teu email :)</p>}
+        {this.state.submitted ? <p>Confirmação submetida com sucesso! :) Obrigada!</p> : <input className="btn btn-default" type="submit" value="Submit"/>}
       </form>
     );
   }
@@ -208,6 +220,7 @@ class Website extends React.Component {
             <div className="">
               {this.renderForm()}
             </div>
+
             <div className="row">
               <div className="col-xs-12 col-sm-6">
                 <p className="legend"><strong>Marta Carvalho</strong></p>
