@@ -6415,12 +6415,16 @@ section, .section {
   min-height: 100vh;
   padding: 6rem 0;
   text-align: center; }
-  section img:not(.location), .section img:not(.location) {
-    margin: 2rem auto;
-    width: 8rem; }
+
+.flower-power {
+  margin: 2rem auto;
+  width: 8rem; }
+
+.section--block {
+  display: block; }
 
 .location {
-  width: 40%; }
+  max-width: 40%; }
 
 @media all and (min-width: 992px) {
   .container {

@@ -148,7 +148,7 @@ class Website extends React.Component {
   render() {
     return (
       <div className="row">
-        <header>
+        {/*<header>
           <input type="checkbox" id="menu"/>
           <label htmlFor="menu">
             <i className="fa fa-bars fa-2x" aria-hidden="true"></i>
@@ -159,20 +159,22 @@ class Website extends React.Component {
             <a href="#gifts">Uma Lembrança</a>
             <a href="#confirm">Confirmação e contactos</a>
           </nav>
-        </header>
+        </header>*/}
         <section id="fofos" className="section--before u--color-white">
           <img className="front-page__img--marta"src="/assets/img/title_main.svg"/>
-          <p>O grande dia está a chegar!</p>
-          <p>Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento.</p>
+          <div className="section">
+            <p>O grande dia está a chegar!</p>
+            <p>Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento.</p>
+          </div>
         </section>
         <article className="container">
           <section>
-            <img src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
+            <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
             <div>
               <p>Sábado, 14 de Outubro de 2017</p>
               <img className="location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
             </div>
-            <img src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
+            <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
           <section id="maps" className="row section--block">
             <div className="col-xs-12 col-sm-6">
@@ -188,19 +190,16 @@ class Website extends React.Component {
             </div>
           </section>
           <section id="gifts">
+            <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
             <p>
-              A tradição já não é o que era!
-            </p>
-            <p>
-              Há 2 anos atrás, decidimos "juntar os trapinhos e as nossas escovas de dentes".
-            </p>
-            <p>
-              Não fizemos lista de casamento porque, para nós, o mais importante é podermos celebrar o nosso amor e a nossa união com as pessoas que nos são mais queridas.
+
+              Para nós, o mais importante é podermos celebrar o nosso amor com as pessoas que nos são mais queridas.
             </p>
             <p>
               A melhor lembrança que nos podem dar é festejar o dia connosco. <br />Se mesmo assim quiserem presentear-nos com algo mais, o nosso NIB é:
             </p>
             <p className="text-big">PT50 0036 0196 9910 0049 2265 2</p>
+            <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
           </section>
           <section id="confirm">
             <p>

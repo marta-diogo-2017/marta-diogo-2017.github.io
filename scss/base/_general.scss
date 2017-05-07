@@ -21,11 +21,11 @@ section {
   min-height: 100vh;
   padding: 6rem 0;
   text-align: center;
+}
 
-  img:not(.location) {
-    margin: 2rem auto;
-    width: 8rem;
-  }
+.flower-power {
+  margin: 2rem auto;
+  width: 8rem;
 }
 
 .section--block {
@@ -33,7 +33,7 @@ section {
 }
 
 .location{
-  width: 40%;
+  max-width: 40%;
 }
 
 .container {
