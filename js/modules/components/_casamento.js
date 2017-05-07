@@ -41,7 +41,7 @@ class Casamento extends React.Component {
 
   render() {
     return (
-      <main className="container-fluid">
+      <main className={this.state.visitor || this.state.admin ? "container-fluid" : "" }>
         {this.whatShouldIRender()}
       </main>
     )

@@ -30,10 +30,10 @@ class Antonio extends React.Component {
 
   render() {
     return (
-      <section className="section--before row u--color-white">
+      <section className="section--before u--color-white">
         <img className="front-page__img" src="/assets/img/flower_up.svg" alt="Marta e Diogo" />
 
-        <form onSubmit={this.onSubmit}>
+        <form className="" onSubmit={this.onSubmit}>
           <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-center">
             <div className={this.state.validation ? "form-group" : "form-group validation-error"}>
               <input placeholder="insira password" className="form-control" type="text" onChange={this.onChange}/>

@@ -3,9 +3,12 @@ $ff: 'Karmilla', sans-serif;
 body {
   box-sizing: border-box;
   font-family: $ff;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   margin: 0;
+  @include media-above($tablet) {
+    font-size: 18px;
+  }
 }
 
 *,
@@ -23,9 +26,26 @@ section {
   text-align: center;
 }
 
+a {
+  color: $green;
+  
+  &:hover, &:focus {
+    color: $darkgreen;
+  }
+}
+
 .flower-power {
   margin: 2rem auto;
   width: 8rem;
+}
+
+.legend {
+  font-size: 18px;
+  line-height: 1;
+
+  &:first-of-type {
+    margin-top: 2rem;
+  }
 }
 
 .section--block {

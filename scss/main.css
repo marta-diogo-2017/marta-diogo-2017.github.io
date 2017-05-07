@@ -6392,9 +6392,12 @@ table {
 body {
   box-sizing: border-box;
   font-family: "Karmilla", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.8;
   margin: 0; }
+  @media all and (min-width: 767px) {
+    body {
+      font-size: 18px; } }
 
 *,
 *::before,
@@ -6416,9 +6419,20 @@ section, .section {
   padding: 6rem 0;
   text-align: center; }
 
+a {
+  color: #94cf9b; }
+  a:hover, a:focus {
+    color: #3f5e42; }
+
 .flower-power {
   margin: 2rem auto;
   width: 8rem; }
+
+.legend {
+  font-size: 18px;
+  line-height: 1; }
+  .legend:first-of-type {
+    margin-top: 2rem; }
 
 .section--block {
   display: block; }

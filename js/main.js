@@ -76,11 +76,11 @@ var Antonio = function (_React$Component) {
 
             return React.createElement(
                 "section",
-                { className: "section--before row u--color-white" },
+                { className: "section--before u--color-white" },
                 React.createElement("img", { className: "front-page__img", src: "/assets/img/flower_up.svg", alt: "Marta e Diogo" }),
                 React.createElement(
                     "form",
-                    { onSubmit: this.onSubmit },
+                    { className: "", onSubmit: this.onSubmit },
                     React.createElement(
                         "div",
                         { className: "col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 text-center" },
@@ -442,7 +442,7 @@ var Website = function (_React$Component2) {
                             React.createElement("img", { src: "/assets/img/igrejaParede.jpg", className: "img-responsive" }),
                             React.createElement(
                                 "p",
-                                null,
+                                { className: "legend" },
                                 "Avenida Amadeu Duarte, 514, 2775 Parede"
                             ),
                             React.createElement(
@@ -461,7 +461,7 @@ var Website = function (_React$Component2) {
                             React.createElement("img", { src: "/assets/img/quintaMurta.jpg", className: "img-responsive" }),
                             React.createElement(
                                 "p",
-                                null,
+                                { className: "legend" },
                                 "Estr. Velha do Boi\xE7\xE3o, 632, 2670 Bucelas"
                             ),
                             React.createElement(
@@ -506,21 +506,29 @@ var Website = function (_React$Component2) {
                             null,
                             "Por favor, confirma a tua presen\xE7a at\xE9 ao dia 14 de Agosto de 2017"
                         ),
-                        this.renderForm(),
                         React.createElement(
                             "div",
-                            { className: "row text-center" },
+                            { className: "" },
+                            this.renderForm()
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "row" },
                             React.createElement(
                                 "div",
                                 { className: "col-xs-12 col-sm-6" },
                                 React.createElement(
                                     "p",
-                                    null,
-                                    "Marta Carvalho"
+                                    { className: "legend" },
+                                    React.createElement(
+                                        "strong",
+                                        null,
+                                        "Marta Carvalho"
+                                    )
                                 ),
                                 React.createElement(
                                     "p",
-                                    null,
+                                    { className: "legend" },
                                     "911 010 980"
                                 )
                             ),
@@ -529,12 +537,16 @@ var Website = function (_React$Component2) {
                                 { className: "col-xs-12 col-sm-6" },
                                 React.createElement(
                                     "p",
-                                    null,
-                                    "Diogo Ramalheira"
+                                    { className: "legend" },
+                                    React.createElement(
+                                        "strong",
+                                        null,
+                                        "Diogo Ramalheira"
+                                    )
                                 ),
                                 React.createElement(
                                     "p",
-                                    null,
+                                    { className: "legend" },
                                     "937 913 110"
                                 )
                             )
@@ -601,7 +613,7 @@ var Casamento = function (_React$Component3) {
         value: function render() {
             return React.createElement(
                 "main",
-                { className: "container-fluid" },
+                { className: this.state.visitor || this.state.admin ? "container-fluid" : "" },
                 this.whatShouldIRender()
             );
         }

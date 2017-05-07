@@ -179,12 +179,12 @@ class Website extends React.Component {
           <section id="maps" className="row section--block">
             <div className="col-xs-12 col-sm-6">
               <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
-              <p>Avenida Amadeu Duarte, 514, 2775 Parede</p>
+              <p className="legend">Avenida Amadeu Duarte, 514, 2775 Parede</p>
               <p><a href="">mapa aqui</a></p>
             </div>
             <div className="col-xs-12 col-sm-6">
               <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
-              <p>Estr. Velha do Boição, 632, 2670 Bucelas</p>
+              <p className="legend">Estr. Velha do Boição, 632, 2670 Bucelas</p>
               <p><a href="">mapa aqui</a></p>
               {/*<iframe className="maps__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8263184680463!2d-9.129081084648762!3d38.927947079565996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd192bb53d9f367f%3A0x8adecf65a99496a0!2sQuinta+da+Murta!5e0!3m2!1sen!2spt!4v1494182016637" frameborder="0" style="border:0" allowfullscreen></iframe>*/}
             </div>
@@ -205,17 +205,17 @@ class Website extends React.Component {
             <p>
               Por favor, confirma a tua presença até ao dia 14 de Agosto de 2017
             </p>
-
+            <div className="">
               {this.renderForm()}
-
-            <div className="row text-center">
+            </div>
+            <div className="row">
               <div className="col-xs-12 col-sm-6">
-                <p>Marta Carvalho</p>
-                <p>911 010 980</p>
+                <p className="legend"><strong>Marta Carvalho</strong></p>
+                <p className="legend">911 010 980</p>
               </div>
               <div className="col-xs-12 col-sm-6">
-                <p>Diogo Ramalheira</p>
-                <p>937 913 110</p>
+                <p className="legend"><strong>Diogo Ramalheira</strong></p>
+                <p className="legend">937 913 110</p>
               </div>
             </div>
           </section>
