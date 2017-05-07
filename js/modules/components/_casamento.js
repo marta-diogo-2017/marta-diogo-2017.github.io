@@ -9,14 +9,15 @@ class Casamento extends React.Component {
     };
 
     this.valAntonio = this.valAntonio.bind(this);
+    this.whatShouldIRender = this.whatShouldIRender.bind(this);
   }
 
   valAntonio (input) {
-    //if (input == '14out17') {
+    if (input == '14out17') {
       // 14out17
-      //this.setState({visitor: true})
-    //}
-    if (input == '') {
+      this.setState({visitor: true})
+    }
+    if (input == 'martA9494') {
       // martA9494
       this.setState({admin: true})
     } else {

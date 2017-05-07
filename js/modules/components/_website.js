@@ -88,7 +88,7 @@ class Website extends React.Component {
 
   renderForm(){
     return(
-      <form className="form-horizontal col-xs-12" onSubmit={this.onSubmit}>
+      <form className="form-horizontal col-xs-12 margin-bottom-lol" onSubmit={this.onSubmit}>
         <div className="form-group">
           <label htmlFor="name">
             Nome
@@ -185,7 +185,7 @@ class Website extends React.Component {
             <div className="col-xs-12 col-sm-6">
               <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
               <p className="legend">Estr. Velha do Boição, 632, 2670 Bucelas</p>
-              <p><a href="">mapa aqui</a></p>
+              <p><a href="https://goo.gl/maps/BRTrs9c8gvn">mapa aqui</a></p>
               {/*<iframe className="maps__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8263184680463!2d-9.129081084648762!3d38.927947079565996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd192bb53d9f367f%3A0x8adecf65a99496a0!2sQuinta+da+Murta!5e0!3m2!1sen!2spt!4v1494182016637" frameborder="0" style="border:0" allowfullscreen></iframe>*/}
             </div>
           </section>
@@ -217,6 +217,7 @@ class Website extends React.Component {
                 <p className="legend"><strong>Diogo Ramalheira</strong></p>
                 <p className="legend">937 913 110</p>
               </div>
+              <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
             </div>
           </section>
           {this.props.admin ? this.renderGuests() : false}

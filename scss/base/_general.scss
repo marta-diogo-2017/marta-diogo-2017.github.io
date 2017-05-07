@@ -28,10 +28,14 @@ section {
 
 a {
   color: $green;
-  
+
   &:hover, &:focus {
     color: $darkgreen;
   }
+}
+
+.margin-bottom-lol {
+  margin-bottom: 4rem;
 }
 
 .flower-power {

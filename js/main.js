@@ -293,7 +293,7 @@ var Website = function (_React$Component2) {
 
             return React.createElement(
                 "form",
-                { className: "form-horizontal col-xs-12", onSubmit: this.onSubmit },
+                { className: "form-horizontal col-xs-12 margin-bottom-lol", onSubmit: this.onSubmit },
                 React.createElement(
                     "div",
                     { className: "form-group" },
@@ -469,7 +469,7 @@ var Website = function (_React$Component2) {
                                 null,
                                 React.createElement(
                                     "a",
-                                    { href: "" },
+                                    { href: "https://goo.gl/maps/BRTrs9c8gvn" },
                                     "mapa aqui"
                                 )
                             )
@@ -549,7 +549,8 @@ var Website = function (_React$Component2) {
                                     { className: "legend" },
                                     "937 913 110"
                                 )
-                            )
+                            ),
+                            React.createElement("img", { className: "flower-power", src: "/assets/img/flower_up_min.svg", alt: "Marta e Diogo" })
                         )
                     ),
                     this.props.admin ? this.renderGuests() : false
@@ -576,17 +577,18 @@ var Casamento = function (_React$Component3) {
         };
 
         _this4.valAntonio = _this4.valAntonio.bind(_this4);
+        _this4.whatShouldIRender = _this4.whatShouldIRender.bind(_this4);
         return _this4;
     }
 
     _createClass(Casamento, [{
         key: "valAntonio",
         value: function valAntonio(input) {
-            //if (input == '14out17') {
-            // 14out17
-            //this.setState({visitor: true})
-            //}
-            if (input == '') {
+            if (input == '14out17') {
+                // 14out17
+                this.setState({ visitor: true });
+            }
+            if (input == 'martA9494') {
                 // martA9494
                 this.setState({ admin: true });
             } else {
