@@ -228,11 +228,11 @@ class Website extends React.Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-6">
-                <p className="legend"><strong>Marta Carvalho</strong></p>
+                <p className="legend"><strong>Marta</strong></p>
                 <p className="legend">911 010 980</p>
               </div>
               <div className="col-xs-12 col-sm-6">
-                <p className="legend"><strong>Diogo Ramalheira</strong></p>
+                <p className="legend"><strong>Diogo</strong></p>
                 <p className="legend">937 913 110</p>
               </div>
               <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
