@@ -179,31 +179,54 @@ class Website extends React.Component {
             <p>Se estás a ler esta mensagem significa que és importante para nós e queremos muito contar com a tua presença  no nosso casamento.</p>
           </div>
         </section>
-        <article className="container">
-          <section>
-            <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
-            <div>
-              <p>Sábado, 14 de Outubro de 2017</p>
-              <img className="img-responsive location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
-            </div>
-            <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
-          </section>
-          <section id="maps" className="row section--block">
-            <h2><img className="section__title" src="/assets/img/title--02.svg" alt="mapas"/></h2>
-            <div className="col-xs-12 col-sm-6 margin-bottom-lol">
-              <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
-              <p className="legend"><strong>Igreja da Parede</strong></p>
-              <p className="legend">Avenida Amadeu Duarte, 514, 2775 Parede</p>
-              <p><a href="https://goo.gl/maps/ucFxkJNWc852" target="_blank">mapa aqui</a></p>
-            </div>
-            <div className="col-xs-12 col-sm-6 margin-bottom-lol">
-              <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
-              <p className="legend"><strong>Quinta da Murta</strong></p>
-              <p className="legend">Estr. Velha do Boição, 632, 2670 Bucelas</p>
-              <p><a href="https://goo.gl/maps/BRTrs9c8gvn" target="_blank">mapa aqui</a></p>
-              {/*<iframe className="maps__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8263184680463!2d-9.129081084648762!3d38.927947079565996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd192bb53d9f367f%3A0x8adecf65a99496a0!2sQuinta+da+Murta!5e0!3m2!1sen!2spt!4v1494182016637" frameborder="0" style="border:0" allowfullscreen></iframe>*/}
-            </div>
-          </section>
+
+        <article>
+            <div className="container">
+              <section>
+                <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
+                <div>
+                  <p>Sábado, 14 de Outubro de 2017</p>
+                  <img className="img-responsive location" src="/assets/img/locations.svg" alt="Marta e Diogo" />
+                </div>
+                <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
+              </section>
+
+              <section id="maps" className="row section--block">
+                <h2><img className="section__title" src="/assets/img/title--02.svg" alt="mapas"/></h2>
+                <div className="col-xs-12 col-sm-6 margin-bottom-lol">
+                  <img src="/assets/img/igrejaParede.jpg" className="img-responsive" />
+                  <p className="legend"><strong>Igreja da Parede</strong></p>
+                  <p className="legend">Avenida Amadeu Duarte, 514, 2775 Parede</p>
+                  <p><a href="https://goo.gl/maps/ucFxkJNWc852" target="_blank">mapa aqui</a></p>
+                </div>
+                <div className="col-xs-12 col-sm-6 margin-bottom-lol">
+                  <img src="/assets/img/quintaMurta.jpg" className="img-responsive" />
+                  <p className="legend"><strong>Quinta da Murta</strong></p>
+                  <p className="legend">Estr. Velha do Boição, 632, 2670 Bucelas</p>
+                  <p><a href="https://goo.gl/maps/BRTrs9c8gvn" target="_blank">mapa aqui</a></p>
+                  {/*<iframe className="maps__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8263184680463!2d-9.129081084648762!3d38.927947079565996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd192bb53d9f367f%3A0x8adecf65a99496a0!2sQuinta+da+Murta!5e0!3m2!1sen!2spt!4v1494182016637" frameborder="0" style="border:0" allowfullscreen></iframe>*/}
+                </div>
+              </section>
+             </div>
+
+              <div style={{'backgroundColor': '#eee'}}>
+                <section className="container">
+                    <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
+                    <h2><img className="section__title" src="/assets/img/title--04.svg" alt="fotografias"/></h2>
+
+                    <p className="margin-bottom-lol">Para nos ajudares com o registo fotográfico deste dia, faz o download da aplicação Wedshoots através do site <a href="https://www.wedshoots.com/pt">{'https://www.wedshoots.com/pt'}</a> (disponível também na AppStore e Google Play). Aqui poderás partilhar connosco as fotografias do dia.</p>
+                    <div className="row margin-bottom-lol">
+                        <div className="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4" style={{'borderRadius': '16px', 'backgroundColor': 'white'}}>
+                        <p className="legend">Código do album</p>
+                        <p className=""><strong>PT289d7bca</strong></p>
+                        </div>
+                    </div>
+
+                    <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
+                </section>
+              </div>
+
+         <div className="container">
           <section id="gifts">
             <img className="flower-power" src="/assets/img/flower_down_min.svg" alt="Marta e Diogo" />
             <h2><img className="section__title" src="/assets/img/title--01.svg" alt="uma lembrança"/></h2>
@@ -228,17 +251,18 @@ class Website extends React.Component {
 
             <div className="row">
               <div className="col-xs-12 col-sm-6">
-                <p className="legend"><strong>Marta</strong></p>
+                <p className="legend"><strong>Marta Carvalho</strong></p>
                 <p className="legend">911 010 980</p>
               </div>
               <div className="col-xs-12 col-sm-6">
-                <p className="legend"><strong>Diogo</strong></p>
+                <p className="legend"><strong>Diogo Ramalheira</strong></p>
                 <p className="legend">937 913 110</p>
               </div>
               <img className="flower-power" src="/assets/img/flower_up_min.svg" alt="Marta e Diogo" />
             </div>
           </section>
           {this.props.admin ? this.renderGuests() : false}
+          </div>
         </article>
       </div>
     );
